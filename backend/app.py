@@ -2,6 +2,8 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS 
 import requests
 from datetime import datetime, timezone, timedelta
+from config import load_config
+
 
 app = Flask(__name__)
 CORS(app)
@@ -12,7 +14,13 @@ def get_data():
 
 
 def get_recent_commits(token=None, per_page=30):
-    url = f"https://api.github.com/repos/Ramisa789/tamagitchi/commits"
+    config = load_config()
+    username = config["github"]["username"]
+    repo = config["github"]["repo"]
+    token = config["github"]["token"]
+
+
+    url = f"https://api.github.com/repos/{username}/{repo}/commits"
     params = {"per_page": per_page}
     headers = {}
     if token:
@@ -46,13 +54,13 @@ def filter_commits_last_hour(commits):
 def get_commit_mood(commits):
     count = len(commits)
     if count == 0:
-        mood = "angry"
+        mood = "Sick"
     elif 0 < count < 3:
-        mood = "sleepy"
+        mood = "Sleepy"
     elif count == 3:
-        mood = "normal"
+        mood = "Default"
     else:
-        mood = "happy"
+        mood = "Happy"
     return count, mood
 
 
@@ -61,14 +69,7 @@ def get_commits():
     all_commits = get_recent_commits()
     recent_commits = filter_commits_last_hour(all_commits)
     count, mood = get_commit_mood(recent_commits)
-    return jsonify(
-        {
-            "message": f"Found {count} commit(s) in the last hour",
-            "commit_count": count,
-            "mood": mood,
-            "data": recent_commits,  # optionally remove or truncate
-        }
-    )
+    return mood
 
 
 if __name__ == "__main__":

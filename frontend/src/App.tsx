@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import Home from './pages/Home'
 import Tamagitchi from './pages/Tamagitchi'
 
-
 function App() {
   return (
     <div className='App'>

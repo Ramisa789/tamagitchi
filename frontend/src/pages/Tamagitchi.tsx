@@ -1,9 +1,7 @@
+import Frame from '../components/Frame'
+
 function Tamagitchi() {
-  return (
-    <div className='App'>
-      <h1>Tamagitchi</h1>
-    </div>
-  )
+  return <Frame />
 }
 
 export default Tamagitchi

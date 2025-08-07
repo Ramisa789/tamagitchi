@@ -1,12 +1,12 @@
 :root {
-  --pastel-green: #DFF0BB;
-  --background-green: #C0D470;
-  --dark-green: #67835C;
-  --white-green: #F7FFE7;
+  --pastel-green: #dff0bb;
+  --background-green: #c0d470;
+  --dark-green: #67835c;
+  --white-green: #f7ffe7;
 }
 body {
   margin: 0;
-  font-family: 'Pixel-font', sans-serif
+  font-family: 'Pixel-font', sans-serif;
 }
 
 code {

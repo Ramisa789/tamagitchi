@@ -23,7 +23,7 @@ function Tamagitchi() {
           </>
         }
       >
-        <SpriteContent spriteType={PetMood.Sick} />
+        <SpriteContent spriteType={PetMood.Default} />
       </Frame>
     </div>
   )

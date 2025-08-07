@@ -57,11 +57,18 @@ const ExitLink = styled.a`
   }
 `
 
+const FrameFooter = styled.div`
+  font-size: 24px;
+  color: #67835c;
+  z-index: 1;
+`
+
 interface FrameProps {
   children?: React.ReactNode
+  footer?: React.ReactNode
 }
 
-const Frame: React.FC<FrameProps> = ({ children }) => {
+const Frame: React.FC<FrameProps> = ({ children, footer }) => {
   return (
     <FrameBack>
       <HeaderContainer>
@@ -71,7 +78,16 @@ const Frame: React.FC<FrameProps> = ({ children }) => {
         </ExitLink>
       </HeaderContainer>
       <FrameBackdropContainer>
-        <FrameBackdrop>{children}</FrameBackdrop>
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center'
+          }}
+        >
+          <FrameBackdrop>{children}</FrameBackdrop>
+          {footer && <FrameFooter>{footer}</FrameFooter>}
+        </div>
       </FrameBackdropContainer>
     </FrameBack>
   )

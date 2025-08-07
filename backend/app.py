@@ -34,8 +34,7 @@ def get_recent_commits(token=None, per_page=30):
 
 def filter_commits_last_hour(commits):
     now = datetime.now(timezone.utc)
-    #one_hour_ago = now - timedelta(hours=1)
-    one_minute_ago = now - timedelta(minutes=1)
+    one_hour_ago = now - timedelta(hours=1)
     recent_commits = []
     latest_commit_time = None
 
@@ -43,7 +42,7 @@ def filter_commits_last_hour(commits):
         try:
             commit_time_str = commit["commit"]["author"]["date"]
             commit_time = datetime.strptime(commit_time_str, "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc)
-            if commit_time >= one_minute_ago:
+            if commit_time >= one_hour_ago:
                 recent_commits.append(commit)
                 if latest_commit_time is None or commit_time > latest_commit_time:
                     latest_commit_time = commit_time

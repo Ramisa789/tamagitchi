@@ -4,10 +4,22 @@ import SpriteContent from '../components/SpriteContent'
 import CountdownTimer from '../components/CountDownTimer'
 import OrangeContainer from '../components/OrangeContainer'
 import styled from 'styled-components'
+import background_plants from '../assets/background-plants.svg'
 
 const Subtext = styled.div`
   margin-top: 10px;
   margin-bottom: 20px;
+`
+
+const BackgroundSprite = styled.img`
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  width: 500px;
+  height: 500px;
+  position: fixed;
+  top: 100;
+  left: 100;
+  z-index: -1;
 `
 
 function Tamagitchi() {
@@ -23,7 +35,8 @@ function Tamagitchi() {
           </>
         }
       >
-        <SpriteContent spriteType={PetMood.Default} />
+        <SpriteContent spriteType={PetMood.Sleepy} />
+        <BackgroundSprite src={background_plants} alt='Sprite of plants' />
       </Frame>
     </div>
   )

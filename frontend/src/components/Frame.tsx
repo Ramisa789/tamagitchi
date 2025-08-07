@@ -23,19 +23,28 @@ const FrameBack = styled.div`
 const FrameBackdrop = styled.div`
   width: 473px;
   height: 520px;
-  background-color: #C0D470;
+  background-color: #c0d470;
   z-index: 1;
-  margin-top: -30px;
-  border: 3px solid #67835C;
+  margin-top: -55px;
+  border: 3px solid #67835c;
+`
 
+const TopRightText = styled.div`
+  position: absolute;
+  top: 12px;
+  left: 20px;
+  font-size: 48px;
+  font-weight: bold;
+  color: #67835c;
+  z-index: 2;
 `
 
 const Frame = () => {
   return (
     <CenterWrapper>
       <FrameBack>
-        <FrameBackdrop>
-        </FrameBackdrop>
+        <TopRightText>TamaGitchi</TopRightText>
+        <FrameBackdrop></FrameBackdrop>
       </FrameBack>
     </CenterWrapper>
   )

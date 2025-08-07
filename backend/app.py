@@ -8,10 +8,6 @@ from config import load_config
 app = Flask(__name__)
 CORS(app)
 
-@app.route("/api/data")
-def get_data():
-    return jsonify({"message": "Commit test 3 from Flask!", "data": [1, 2, 3]})
-
 
 def get_recent_commits(token=None, per_page=30):
     config = load_config()

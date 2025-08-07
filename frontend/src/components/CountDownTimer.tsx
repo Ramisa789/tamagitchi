@@ -38,7 +38,7 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ startTimestamp }) => {
           </div>
         </span>
       ) : (
-        <span>Make a commit to heal me!</span>
+        <span>00:00</span>
       )}
     </div>
   )

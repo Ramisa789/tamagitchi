@@ -5,23 +5,23 @@ import orangeThingy from '../assets/orange-thingy.svg'
 const Container = styled.div`
   position: relative;
   display: inline-block;
+  top: -20px;
 `
 
 const Image = styled.img`
   display: block;
-  width: 289px;
-  height: 95px;
+  width: 280px;
+  height: 90px;
 `
 
 const OverlayContent = styled.div`
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: #fff;
   font-size: 32px;
   font-family: 'Pixel-font', sans-serif;
-  text-shadow: 2px 2px 0 #5c3523;
 `
 
 interface OrangeContainerProps {

@@ -78,16 +78,16 @@ const Frame: React.FC<FrameProps> = ({ children, footer }) => {
         </ExitLink>
       </HeaderContainer>
       <FrameBackdropContainer>
-      <div
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center'
-        }}
-      >
-        <FrameBackdrop>{children}</FrameBackdrop>
-        {footer && <FrameFooter>{footer}</FrameFooter>}
-      </div>
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center'
+          }}
+        >
+          <FrameBackdrop>{children}</FrameBackdrop>
+          {footer && <FrameFooter>{footer}</FrameFooter>}
+        </div>
       </FrameBackdropContainer>
     </FrameBack>
   )

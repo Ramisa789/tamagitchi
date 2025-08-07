@@ -27,6 +27,10 @@ const FrameBackdrop = styled.div`
   z-index: 1;
   margin-top: -55px;
   border: 3px solid #67835c;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `
 
 const TopRightText = styled.div`
@@ -39,12 +43,16 @@ const TopRightText = styled.div`
   z-index: 2;
 `
 
-const Frame = () => {
+interface FrameProps {
+  children?: React.ReactNode
+}
+
+const Frame: React.FC<FrameProps> = ({ children }) => {
   return (
     <CenterWrapper>
       <FrameBack>
         <TopRightText>TamaGitchi</TopRightText>
-        <FrameBackdrop></FrameBackdrop>
+        <FrameBackdrop>{children}</FrameBackdrop>
       </FrameBack>
     </CenterWrapper>
   )

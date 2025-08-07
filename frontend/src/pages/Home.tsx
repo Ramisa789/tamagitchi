@@ -2,6 +2,8 @@ import styled, { keyframes } from 'styled-components'
 import Frame from '../components/Frame'
 import playButton from '../assets/play-button.svg'
 import nerdEmote from '../assets/nerd-emote.png'
+import sparklesOne from '../assets/sparkles-1.png'
+import sparklesTwo from '../assets/sparkles-2.png'
 
 const PlayButton = styled.a`
   background: none;
@@ -29,7 +31,7 @@ const WelcomeContainer = styled.div`
 
   img {
     margin-bottom: 20px;
-    height:100px;
+    height: 100px;
     animation: bounce 1s steps(1, end) infinite;
   }
 
@@ -74,6 +76,51 @@ const WelcomeSubText = styled.div`
     4px 4px 0 white;
 `
 
+const flash = keyframes`
+  0%, 49% {
+    opacity: 1;
+  }
+  50%, 100% {
+    opacity: 0;
+  }
+`
+
+const reverseFlash = keyframes`
+  0%, 49% {
+    opacity: 0;
+  }
+  50%, 100% {
+    opacity: 1;
+  }
+`
+
+const Sparkle = styled.img`
+  position: absolute;
+  top: 0;
+  height: 40px;
+  image-rendering: pixelated;
+`
+
+const SparkleOne = styled(Sparkle)`
+  left: -140px;
+  top: -50px;
+  animation: ${flash} 1s infinite linear !important;
+`
+
+const SparkleTwo = styled(Sparkle)`
+  right: -160px;
+  animation: ${reverseFlash} 2s infinite linear !important;
+`
+
+const EmoteContainer = styled.div`
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  height: 100px;
+`
+
 function Home() {
   return (
     <div className='wrapper'>
@@ -87,7 +134,11 @@ function Home() {
         }
       >
         <WelcomeContainer>
-          <img src={nerdEmote} alt='Nerd emote' />
+          <EmoteContainer>
+            <SparkleOne src={sparklesOne} alt='sparkles 1' />
+            <img src={nerdEmote} alt='Nerd emote' height={100} />
+            <SparkleTwo src={sparklesTwo} alt='sparkles 2' />
+          </EmoteContainer>
           <WelcomeText>WELCOME</WelcomeText>
           <WelcomeSubText>to Tamagitchi</WelcomeSubText>
         </WelcomeContainer>

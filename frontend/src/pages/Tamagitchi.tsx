@@ -5,7 +5,7 @@ import CountdownTimer from '../components/CountDownTimer'
 import OrangeContainer from '../components/OrangeContainer'
 import styled from 'styled-components'
 import background_plants from '../assets/background-plants.svg'
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'
 
 const Subtext = styled.div`
   margin-top: 10px;
@@ -22,36 +22,36 @@ const BackgroundSprite = styled.img`
   left: 100;
   z-index: -1;
 `
-const POLL_INTERVAL = 5000; // every 5 seconds
+const POLL_INTERVAL = 5000 // every 5 seconds
 
 function Tamagitchi() {
-  const [mood, setMood] = useState<PetMood>(PetMood.Default);
-  const [timestamp, setTimestamp] = useState<number>(0);
+  const [mood, setMood] = useState<PetMood>(PetMood.Default)
+  const [timestamp, setTimestamp] = useState<number>(0)
 
   useEffect(() => {
-  const fetchData = async () => {
-    try {
-      const response = await fetch('http://127.0.0.1:5000/api/commits');
-      const data = await response.json();
-      const { mood: moodText, latest_commit_unix_ms } = data;
+    const fetchData = async () => {
+      try {
+        const response = await fetch('http://127.0.0.1:5000/api/commits')
+        const data = await response.json()
+        const { mood: moodText, latest_commit_unix_ms } = data
 
-      if (Object.values(PetMood).includes(moodText as PetMood)) {
-        setMood(moodText as PetMood);
-        setTimestamp(latest_commit_unix_ms);
-      } else {
-        console.warn("Unexpected mood:", moodText);
+        if (Object.values(PetMood).includes(moodText as PetMood)) {
+          setMood(moodText as PetMood)
+          setTimestamp(latest_commit_unix_ms)
+        } else {
+          console.warn('Unexpected mood:', moodText)
+        }
+      } catch (err) {
+        console.error('Error fetching mood data:', err)
       }
-    } catch (err) {
-      console.error("Error fetching mood data:", err);
     }
-  };
 
-  fetchData(); // initial fetch immediately
+    fetchData() // initial fetch immediately
 
-  const intervalId = setInterval(fetchData, POLL_INTERVAL); // poll every 5s
+    const intervalId = setInterval(fetchData, POLL_INTERVAL) // poll every 5s
 
-    return () => clearInterval(intervalId); // cleanup on unmount
-  }, []);
+    return () => clearInterval(intervalId) // cleanup on unmount
+  }, [])
 
   return (
     <div className='wrapper'>

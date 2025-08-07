@@ -1,14 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const CenterWrapper = styled.div`
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #f0f0f0;
-`
-
 const FrameBack = styled.div`
   position: relative;
   width: 519px;
@@ -49,12 +41,10 @@ interface FrameProps {
 
 const Frame: React.FC<FrameProps> = ({ children }) => {
   return (
-    <CenterWrapper>
       <FrameBack>
         <TopRightText>TamaGitchi</TopRightText>
         <FrameBackdrop>{children}</FrameBackdrop>
       </FrameBack>
-    </CenterWrapper>
   )
 }
 

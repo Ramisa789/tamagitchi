@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import styled from 'styled-components'
 
 interface ApiResonse {
   message: string
@@ -16,7 +17,7 @@ function Home() {
   }, [])
 
   return (
-    <div className='App'>
+    <div>
       <h1>Home</h1>
       {data ? (
         <div>

@@ -4,6 +4,22 @@
   --dark-green: #67835c;
   --white-green: #f7ffe7;
 }
+
+.App {
+  background-image: url(./assets/background.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
 body {
   margin: 0;
   font-family: 'Pixel-font', sans-serif;
@@ -16,7 +32,7 @@ code {
 
 @font-face {
   font-family: 'Pixel-font';
-  src: url('./fonts/PixelifySans-VariableFont_wght.ttf');
+  src: url('./assets/fonts/PixelifySans-VariableFont_wght.ttf');
   font-weight: normal;
   font-style: normal;
 }

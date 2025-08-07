@@ -1,6 +1,6 @@
 export enum PetMood {
-  Default,
-  Happy,
-  Sleepy,
-  Sick
+  Default = "Default",
+  Happy = "Happy",
+  Sleepy = "Sleepy",
+  Sick = "Sick"
 }

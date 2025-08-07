@@ -6,12 +6,23 @@
 }
 
 .App {
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.App::before {
+  content: '';
+  position: absolute;
+  inset: 0;
   background-image: url(./assets/background.svg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-}
 
+  filter: blur(2px);
+  z-index: -1;
+}
 .wrapper {
   height: 100vh;
   display: flex;

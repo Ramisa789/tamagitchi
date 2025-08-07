@@ -1,6 +1,7 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import Frame from '../components/Frame'
 import playButton from '../assets/play-button.svg'
+import nerdEmote from '../assets/nerd-emote.png'
 
 const PlayButton = styled.a`
   background: none;
@@ -24,9 +25,32 @@ const WelcomeContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 30px;
+
+  img {
+    margin-bottom: 20px;
+    height:100px;
+    animation: bounce 1s steps(1, end) infinite;
+  }
+
+  @keyframes bounce {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+  }
 `
 
-const WelcomeText = styled.div`
+const float = keyframes`
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+`
+
+const WelcomeText = styled.h1`
   color: #67835c;
   font-size: 80px;
   font-family: 'Pixel-font', sans-serif;
@@ -35,6 +59,8 @@ const WelcomeText = styled.div`
     4px -4px 0 white,
     -4px 4px 0 white,
     4px 4px 0 white;
+  animation: ${float} 2s ease-in-out infinite;
+  margin: 0;
 `
 
 const WelcomeSubText = styled.div`
@@ -61,6 +87,7 @@ function Home() {
         }
       >
         <WelcomeContainer>
+          <img src={nerdEmote} alt='Nerd emote' />
           <WelcomeText>WELCOME</WelcomeText>
           <WelcomeSubText>to Tamagitchi</WelcomeSubText>
         </WelcomeContainer>

@@ -140,7 +140,7 @@ function Home() {
             <SparkleTwo src={sparklesTwo} alt='sparkles 2' />
           </EmoteContainer>
           <WelcomeText>WELCOME</WelcomeText>
-          <WelcomeSubText>to Tamagitchi</WelcomeSubText>
+          <WelcomeSubText>to TamaGitchi</WelcomeSubText>
         </WelcomeContainer>
       </Frame>
     </div>

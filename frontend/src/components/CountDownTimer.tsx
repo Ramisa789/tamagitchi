@@ -1,8 +1,18 @@
 import React, { useEffect, useState } from 'react'
+import styled, {keyframes} from 'styled-components'
 
 interface CountdownTimerProps {
   startTimestamp: number
 }
+
+const flash = keyframes`
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+`
+
+const TimerText = styled.span`
+  animation: ${flash} 0.8s step-start infinite;
+`
 
 const CountdownTimer: React.FC<CountdownTimerProps> = ({ startTimestamp }) => {
   const [timeLeft, setTimeLeft] = useState<number>(0)
@@ -38,7 +48,7 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ startTimestamp }) => {
           </div>
         </span>
       ) : (
-        <span>00:00!</span>
+        <TimerText>00:00!</TimerText>
       )}
     </div>
   )

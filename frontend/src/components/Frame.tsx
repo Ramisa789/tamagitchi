@@ -1,15 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
+import delete_icon from '../assets/delete-icon.svg'
 
 const FrameBack = styled.div`
   position: relative;
   width: 519px;
   height: 750px;
   background-color: #dff0bb;
+  border: 3px solid #67835c;
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  border-radius: 8px;
 `
 
 const FrameBackdrop = styled.div`
@@ -19,20 +19,42 @@ const FrameBackdrop = styled.div`
   z-index: 1;
   margin-top: -55px;
   border: 3px solid #67835c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+`
 
+const FrameBackdropContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
 `
 
-const TopRightText = styled.div`
-  position: absolute;
-  top: 12px;
-  left: 20px;
+const HeaderContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  margin-bottom: 50px;
+`
+
+const TopRightText = styled.p`
   font-size: 48px;
   font-weight: bold;
   color: #67835c;
-  z-index: 2;
+  margin: 0;
+`
+
+const ExitLink = styled.a`
+  display: inline-block;
+
+  img {
+    transition: transform 0.2s ease;
+  }
+
+  &:hover img {
+    transform: translateY(-3px);
+  }
 `
 
 interface FrameProps {
@@ -41,10 +63,17 @@ interface FrameProps {
 
 const Frame: React.FC<FrameProps> = ({ children }) => {
   return (
-      <FrameBack>
+    <FrameBack>
+      <HeaderContainer>
         <TopRightText>TamaGitchi</TopRightText>
+        <ExitLink href='/'>
+          <img src={delete_icon} alt='Exit icon' height={60} width={60} />
+        </ExitLink>
+      </HeaderContainer>
+      <FrameBackdropContainer>
         <FrameBackdrop>{children}</FrameBackdrop>
-      </FrameBack>
+      </FrameBackdropContainer>
+    </FrameBack>
   )
 }
 

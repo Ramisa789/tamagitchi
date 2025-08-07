@@ -5,9 +5,9 @@ import SpriteContent from './SpriteContent'
 function Tamagitchi() {
   return (
     <div className='wrapper'>
-    <Frame>
-      <SpriteContent spriteType={PetMood.Default}></SpriteContent>
-    </Frame>
+      <Frame>
+        <SpriteContent spriteType={PetMood.Default}></SpriteContent>
+      </Frame>
     </div>
   )
 }

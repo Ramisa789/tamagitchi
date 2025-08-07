@@ -17,11 +17,12 @@ const PetWrapper = styled.div`
     width: 100%;
     height: auto;
     margin-top: 50px;
-    animation: bounce 1s steps(1,end) infinite;
+    animation: bounce 1s steps(1, end) infinite;
   }
 
   @keyframes bounce {
-    0%, 100% {
+    0%,
+    100% {
       transform: translateY(0);
     }
     50% {

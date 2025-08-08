@@ -13,17 +13,6 @@ const Subtext = styled.div`
   margin-bottom: 20px;
 `
 
-const BackgroundSprite = styled.img`
-  image-rendering: pixelated;
-  image-rendering: crisp-edges;
-  width: 500px;
-  height: 500px;
-  position: fixed;
-  top: 100;
-  left: 100;
-  z-index: -1;
-`
-
 const Leaves = styled.img`
   position: absolute;
   bottom: 160px;

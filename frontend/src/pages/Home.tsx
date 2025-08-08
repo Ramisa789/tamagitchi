@@ -9,7 +9,6 @@ const PlayButton = styled.a`
   background: none;
   border: none;
   padding: 0;
-  cursor: pointer;
 
   img {
     width: 280px;

@@ -4,6 +4,7 @@ import playButton from '../assets/play-button.svg'
 import nerdEmote from '../assets/nerd-emote.png'
 import sparklesOne from '../assets/sparkles-1.png'
 import sparklesTwo from '../assets/sparkles-2.png'
+import leaves from '../assets/leaves.png'
 
 const PlayButton = styled.a`
   background: none;
@@ -120,6 +121,13 @@ const EmoteContainer = styled.div`
   height: 100px;
 `
 
+const Leaves = styled.img`
+  position: absolute;
+  bottom: 150px;
+  image-rendering: pixelated;
+  width: 340px;
+`
+
 function Home() {
   return (
     <div className='wrapper'>
@@ -141,6 +149,7 @@ function Home() {
           <WelcomeText>WELCOME</WelcomeText>
           <WelcomeSubText>to TamaGitchi</WelcomeSubText>
         </WelcomeContainer>
+        <Leaves src={leaves} alt='Leaves' />
       </Frame>
     </div>
   )

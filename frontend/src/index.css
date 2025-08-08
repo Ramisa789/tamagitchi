@@ -9,7 +9,9 @@
   position: relative;
   z-index: 0;
   overflow: hidden;
-  cursor: url('./assets/cursor.png') 4 4, auto;
+  cursor:
+    url('./assets/cursor.png') 4 4,
+    auto;
 }
 
 .App::before {
@@ -33,7 +35,9 @@
 }
 
 a {
-  cursor: url('./assets/pointer.png') 4 4, auto;
+  cursor:
+    url('./assets/pointer.png') 4 4,
+    auto;
 }
 
 body {

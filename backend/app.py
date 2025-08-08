@@ -10,7 +10,7 @@ CORS(app)
 
 @app.route("/api/data")
 def get_data():
-    return jsonify({"message": "1 commit!", "data": [1, 2, 3]})
+    return jsonify({"message": "2 commits!", "data": [1, 2, 3]})
 
 
 def get_recent_commits(token=None, per_page=30):

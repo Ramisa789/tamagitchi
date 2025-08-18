@@ -1,4 +1,4 @@
-# tamagitchi
+# tamagitchi ![alt text](image.png)
 
 
 ## What to install:

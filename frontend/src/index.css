@@ -1,13 +1,58 @@
+:root {
+  --pastel-green: #dff0bb;
+  --background-green: #c0d470;
+  --dark-green: #67835c;
+  --white-green: #f7ffe7;
+}
+
+.App {
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  cursor:
+    url('./assets/cursor.png') 4 4,
+    auto;
+}
+
+.App::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url(./assets/background.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  filter: blur(2px);
+  z-index: -1;
+}
+
+.wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  cursor:
+    url('./assets/pointer.png') 4 4,
+    auto;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Pixel-font', sans-serif;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family:
+    source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+@font-face {
+  font-family: 'Pixel-font';
+  src: url('./assets/fonts/PixelifySans-VariableFont_wght.ttf');
+  font-weight: normal;
+  font-style: normal;
 }

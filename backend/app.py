@@ -8,10 +8,6 @@ from config import load_config
 app = Flask(__name__)
 CORS(app)
 
-@app.route("/api/data")
-def get_data():
-    return jsonify({"message": "1 commit!", "data": [1, 2, 3]})
-
 
 def get_recent_commits(token=None, per_page=30):
     config = load_config()
@@ -85,3 +81,4 @@ def get_commits():
 
 if __name__ == "__main__":
     app.run(debug=True, port=5000)
+

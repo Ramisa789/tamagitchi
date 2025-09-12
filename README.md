@@ -1,7 +1,27 @@
-# tamagitchi ![alt text](image.png)
+![alt text](image.png)
+# Tamagitchi 
 
+<p align="center">
+Tamagitchi is a Tamagotchi-inspired web app that motivates productivity by linking your GitHub commit activity to the mood of a virtual pet. The more you commit, the happier your Tamagitchi becomes!
+</p>
 
-## What to install:
+<p align="center">
+Built during a hackathon (and 🏆 awarded first place), Tamagitchi motivates developers to stay consistent with their coding habits.
+</p>
+
+##
+
+### Table of Contents
+- [Getting Started](#-getting-started)
+- [Demo](#-demo)
+
+### 👀 Demo
+
+... In progress
+
+### 🚀 Getting Started
+
+**What to install:**
 
 ```pip install npm```
 
@@ -9,9 +29,9 @@
 
 ```pip install -r requirements.txt```
 
-## How to get started:
+**How to get started:**
 
-### 1. Create a config.toml file in the backend directory and fill out the following information:
+**1. Create a config.toml file in the backend directory and fill out the following information:**
 
 ```
 [github]
@@ -20,8 +40,10 @@ repo = "Name of repo"
 token = "Personal access token" 
 ```
 
-### 2. From the frontend folder run the following command:
+**2. From the frontend folder run the following command:**
 ```npm start```
 
-### 3. From the backend folder run the following command:
+**3. From the backend folder run the following command:**
 ```python app.py```
+
+**4. Start commiting!**

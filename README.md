@@ -12,12 +12,18 @@ Built during a hackathon (and 🏆 awarded first place), Tamagitchi motivates de
 ##
 
 ### Table of Contents
-- [Getting Started](#-getting-started)
 - [Demo](#-demo)
+- [Tech Stack](#-tech-stack)
+- [Getting Started](#-getting-started)
 
 ### 👀 Demo
 
 ... In progress
+
+### 🦾 Tech Stack
+- **Python + Flask** - Backend
+- **TypeScript, HTML, CSS** - Frontend UI
+- **GitHub API** - For commit information
 
 ### 🚀 Getting Started
 

@@ -1,8 +1,8 @@
 ![alt text](image.png)
-# Tamagitchi 
+# TamaGitchi 
 
 <p align="center">
-Tamagitchi is a Tamagotchi-inspired web app that motivates productivity by linking your GitHub commit activity to the mood of a virtual pet. The more you commit, the happier your Tamagitchi becomes!
+TamaGitchi is a Tamagotchi-inspired web app that motivates productivity by linking your GitHub commit activity to the mood of a virtual pet. The more you commit, the happier your Tamagitchi becomes!
 </p>
 
 <p align="center">
@@ -18,7 +18,7 @@ Built during a hackathon (and 🏆 awarded first place), Tamagitchi motivates de
 
 ### 👀 Demo
 
-... In progress
+View Demo Video [Here](https://drive.google.com/file/d/1eVJKkP_jZ4WfQZ11NaPX3aERIAU_abwg/view?usp=sharing)
 
 ### 🦾 Tech Stack
 - **Python + Flask** - Backend
